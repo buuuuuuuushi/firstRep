@@ -1,0 +1,173 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat', sans-serif;
+}
+
+body{
+background:#f9f9f9; }
+
+header.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;  
+    z-index: 100; }
+
+nav a {
+    text-decoration: none;
+    color: #4A3F35;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s; }
+
+    nav a:hover,
+    nav a.active {
+    color: #B08968;
+    font-weight: bold; }
+
+.logo {
+    text-decoration: none;
+    width: 45px;  
+    height: 45px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;  }
+
+.logo img{
+width:45px;
+height:45px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.8s; 
+    padding-top: 90px;  
+    border-right: 0.5px solid #f28aa1;  }
+
+.sidebar a {
+    padding: 20px 35px;
+    text-decoration: none;
+    font-size: 15px;
+    color:  #4a202a;
+    display: block;
+    transition: 0.3s;  }
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;  }  
+
+.hero {
+    position: relative;
+    height: 180vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/606444828_1461177469347614_5097790134612853086_n.jpg?stp=dst-jpg_tt6&cstp=mx1365x2048&ctp=s1365x2048&_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeGxAiNqTdFhCkDZ8AvDNsKuS8QswLDpWHpLxCzAsOlYemZyD3OOC5qqybRgY3EwlFhS_zeV9VrpMZ3GoCA4xyM3&_nc_ohc=AK-FIoDvpHoQ7kNvwEKF_UA&_nc_oc=AdrrWQGLVFXM4zSnTQXyVlOzSrzeAnKsw5Of36Em7bbbg_QjXryCq5SiFYqxZyJ5ymw&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=2JtuKV20y200UFdX9TkINw&_nc_ss=7b2a8&oh=00_Af8dOmHFORmVRwcgeuiFEcJOdbsWWSWUcJmDnW06zX805A&oe=6A356E9D); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;    }
+
+    .hero-logo { width: 250px; margin-bottom: 20px; }
+    
+    .hero h2 { 
+        font-weight: 400; 
+        max-width: 600px; 
+        font-size: 1.2rem; 
+        line-height: 1.6;
+        margin-bottom: 30px;    }
+
+    .cta-container {
+    background: rgba(60, 20, 30, 0.8);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;    }
+
+    .cta-btn {
+    background-color: #e58a9d;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;    }
+
+    .prep-section {
+    background: white;
+    margin: -50px auto 50px;
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.7); 
+    transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);  }
+
+    .prep-section h1 { 
+    color: #5a2a35; 
+    font-style: italic; 
+    font-weight: 500; 
+    margin-bottom: 40px; }
+
+    .prep-section.show-up {
+    opacity: 1;
+    transform: scale(1) translateY(-100px);  }
+
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;    }
+
+    .card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s;    
+    text-decoration: none; }
+    
+    .card:hover { transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #f1eded, #f28aa1); }
+
+    .card-content { padding: 15px; }
+    .card-content h3 { margin: 0; color: #781727; font-size: 1.1rem;}
+    .card-content p { margin: 5px 0; font-size: 0.8rem; color: #666;}
+
+    .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;    }
+
+    .footer {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    margin-top: 40px;  }
