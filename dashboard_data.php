@@ -7,21 +7,21 @@ $totalReservations = 0;
 $upcomingEvents = 0;
 $pendingRequests = 0;
 
-$res = $conn->query("SELECT COUNT(*) AS total FROM reservations");
+$res = $conn->query("SELECT COUNT(*) AS total FROM tbl_booking");
 if ($res) {
     $row = $res->fetch_assoc();
     $totalReservations = intval($row['total']);
     $res->close();
 }
 
-$res = $conn->query("SELECT COUNT(*) AS total FROM reservations WHERE event_date >= CURDATE()");
+$res = $conn->query("SELECT COUNT(*) AS total FROM tbl_booking WHERE AppointmentDate >= CURDATE()");
 if ($res) {
     $row = $res->fetch_assoc();
     $upcomingEvents = intval($row['total']);
     $res->close();
 }
 
-$res = $conn->query("SELECT COUNT(*) AS total FROM reservations WHERE status = 'Pending'");
+$res = $conn->query("SELECT COUNT(*) AS total FROM tbl_booking");
 if ($res) {
     $row = $res->fetch_assoc();
     $pendingRequests = intval($row['total']);

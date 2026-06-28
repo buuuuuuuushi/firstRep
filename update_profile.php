@@ -21,21 +21,21 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     sendJson(['status' => 'error', 'message' => 'Enter a valid email address.']);
 }
 
-$check = $conn->prepare('SELECT id FROM users WHERE email = ? AND id != ?');
+$check = $conn->prepare('SELECT UserID FROM tbl_users WHERE Username = ? AND UserID != ?');
 $check->bind_param('si', $email, $userId);
 $check->execute();
 $check->store_result();
 if ($check->num_rows > 0) {
-    sendJson(['status' => 'error', 'message' => 'That email is already in use.']);
+    sendJson(['status' => 'error', 'message' => 'That email/username is already in use.']);
 }
 $check->close();
 
 if ($password !== '') {
     $hash = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $conn->prepare('UPDATE users SET fullname = ?, email = ?, password = ? WHERE id = ?');
+    $stmt = $conn->prepare('UPDATE tbl_users SET FullName = ?, Username = ?, Password = ? WHERE UserID = ?');
     $stmt->bind_param('sssi', $fullname, $email, $hash, $userId);
 } else {
-    $stmt = $conn->prepare('UPDATE users SET fullname = ?, email = ? WHERE id = ?');
+    $stmt = $conn->prepare('UPDATE tbl_users SET FullName = ?, Username = ? WHERE UserID = ?');
     $stmt->bind_param('ssi', $fullname, $email, $userId);
 }
 

@@ -16,7 +16,7 @@ if ($email === '' || $password === '') {
     exit;
 }
 
-$stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?');
+$stmt = $conn->prepare('SELECT UserID, Password FROM tbl_users WHERE Username = ?');
 $stmt->bind_param('s', $email);
 $stmt->execute();
 $stmt->bind_result($id, $hash);

@@ -28,19 +28,20 @@ if ($password !== $confirmPassword) {
     exit;
 }
 
-$check = $conn->prepare('SELECT id FROM users WHERE email = ?');
+$check = $conn->prepare('SELECT UserID FROM tbl_users WHERE Username = ?');
 $check->bind_param('s', $email);
 $check->execute();
 $check->store_result();
 if ($check->num_rows > 0) {
-    echo json_encode(['status' => 'error', 'message' => 'That email is already registered.']);
+    echo json_encode(['status' => 'error', 'message' => 'That email/username is already registered.']);
     exit;
 }
 $check->close();
 
 $hash = password_hash($password, PASSWORD_DEFAULT);
-$insert = $conn->prepare('INSERT INTO users (fullname, email, password) VALUES (?, ?, ?)');
-$insert->bind_param('sss', $fullname, $email, $hash);
+$insert = $conn->prepare('INSERT INTO tbl_users (Username, FullName, Password, Role, DateCreated) VALUES (?, ?, ?, ?, CURDATE())');
+$role = 'Staff';
+$insert->bind_param('ssss', $email, $fullname, $hash, $role);
 if ($insert->execute()) {
     echo json_encode(['status' => 'success']);
 } else {
