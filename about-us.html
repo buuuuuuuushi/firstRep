@@ -4,56 +4,54 @@
     <title> About Us </title>
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="about-us.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href="about-us.css">
 </head>
 
     <body>
     <header class="header-nav">
     <nav>
-        <a href = "home.html" class = "active"> Home </a>
-        <a href = "about-us.html" > About Us </a>
+        <a href = "home.html" > Home </a>
+        <a href = "about-us.html" class = "active"> About Us </a>
         <a href = "services.html" > Services </a>
         <a href = "contacts.html" > Contacts </a>
-        <a href = "LogIn.html" > Login </a>
-        <a href = "register.html" > Register </a>
-        <a href = "Dashboard.html" > Dashboard </a>
-        <a href = "records.html" > Reservations </a>
-        <a href = "reports.html" > Reports </a>
-        <a href = "profile.html" > Profile </a>
-    
     </nav>
 
+    <div class = "nav-right">
+        <button id = "loginBtn" class = "login-btn">
+            Login
+        </button>
+
+        <button id = "registerBtn" class = "register-btn">
+            Register
+        </button>
+
     <a href = "home.html" class = "logo">
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/305545512_512139750918062_4409565610826396728_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGMdO81dUvLzI0GUTm1FJf8kjxIqw4ru7SSPEirDiu7tP4w7U6a3GDpS6lhlxvbBVF2K4KFnYa3pmUEILkPZACd&_nc_ohc=KaBIExa7q64Q7kNvwGly-7Q&_nc_oc=Adpf2DGbZg3FPBxxmUClOWvWo6Vp8FtZZ0EQlxA6rVnyVbHKE0hDiGunwD1tjrx7Xd8&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=8vhoW2-qUNAurg37bPZDYA&_nc_ss=7b2a8&oh=00_Af81w8Tlwnrq3ySDstfETJz34vNTMIKyFwZUaSPSFhzfAA&oe=6A356BAF" alt="A&A Logo">
+        <img src = "logo.jpg" alt="A&A Logo">
     </a>
     </header>
 
-<section class="hero">
-    <div class="hero-overlay">
-        <h1>About Us</h1>
-        <p>Creating unforgettable moments, one celebration at a time.</p>
+<section class = "hero">
+    <div class = "hero-overlay">
+        <img src = "A&A.png" alt = "" class = "png-shadow">
+       
     </div>
 </section>
 
-<section class="section about-section">
+<section class = "section about-section">
 
-    <div class="about-image">
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/719027145_1602086428590050_8924825949033277521_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEKUpxRdwm3cc22a-XSyJyl5edNmEJ8AXTl502YQnwBdKxRlezrZj42NQTItV_rQiqnW_cR16rTtQVzpwfXv29c&_nc_ohc=WSv3mT5ZUqEQ7kNvwG1MmOQ&_nc_oc=AdriIrkITz-rd2Pl4Be9gaOVH6bFb3whPBTuYSTlng3bwSD-G_0lgDTffpjEiUYpjLw&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=JQ5SgxYQzA57I9WZO8foGA&_nc_ss=7b2a8&oh=00_Af8AALM1xkzyL9KkZtUnZNoQzuk2U0f50jj8WBE-9o2cyA&oe=6A356CB6" alt="A&A Event">
+    <div class = "about-image">
+        <img src = "story.jpg" alt="A&A Event">
     </div>
 
-    <div class="about-text">
-        <h2>Our Story</h2>
-
+    <div class = "about-text">
+        <h2>ABOUT US</h2>
         <p>
             A&A Events is an event planning and coordination company specializing
             in weddings and other special occasions. We are committed to helping
             clients create memorable and stress-free celebrations through
             professional planning, seamless coordination, and personalized service.
-        </p>
-
-        <p>
             From consultations and venue visits to vendor coordination and event
             execution, A&A Events ensures that every detail is carefully planned
             and managed to deliver exceptional experiences.
@@ -62,11 +60,79 @@
 
 </section>
 
-<section class="section">
+<section class = "story-section">
+    <h2> OUR STORY </h2>
 
-    <div class="cards">
+<div class = "timeline-card">
+    <img src = "2015.jpg"><div class = "timeline-info">
+        <button class = "timeline-btn">
+            <span>2015   |   The Dream</span><i class="fas fa-chevron-down"></i>
+        </button>
 
-        <div class="card">
+        <div class = "timeline-content">
+            <p> It all began with a dream in 2015, when Patrice envisioned building a business 
+            she could proudly call her own. Standing beside her every step of the way was Robert, 
+            her devoted boyfriend at the time, who believed in her dream just as deeply as she did. 
+            Together, they turned that vision into reality by founding A&A Events in 2017. </p>
+        </div>
+    </div>
+</div>
+
+<div class="timeline-card">
+    <img src = "2017.jpg"><div class = "timeline-info"></div>
+    <div class = "timeline-info">
+        <button class = "timeline-btn">
+            <span>2017   |   A&A Events Begins</span><i class="fas fa-chevron-down"></i>
+        </button>
+
+        <div class = "timeline-content">
+            <p> The journey was far from easy. As fresh college graduates, they were often met with doubt. 
+            After all, who would entrust one of the most important days of their lives to a young couple 
+            with little experience? Yet, through passion, dedication, and countless hours of hard work, they 
+            gradually earned the trust of every client they served. One wedding after another, they transformed 
+            dreams into unforgettable celebrations, proving that genuine commitment speaks louder than years of 
+            experience. </p>
+        </div>
+    </div>
+</div>
+
+<div class = "timeline-card">
+    <img src = "2020.jpg"><div class = "timeline-info">
+        <button class = "timeline-btn">
+            <span>2020   |   Their Pandemic Wedding</span><i class="fas fa-chevron-down"></i>
+        </button>
+
+        <div class = "timeline-content">
+            <p>In 2020, Robert and Patrice celebrated a milestone of their own as they exchanged vows in 
+                a civil wedding. A year later, they welcomed their beautiful daughter, adding another chapter 
+                to the life they had been building together. While they continued creating magical weddings for 
+                countless couples, one dream remained close to their hearts: celebrating their own church wedding.</p>
+        </div>
+    </div>
+</div>
+
+<div class = "timeline-card">
+    <img src = "2026.jpg"><div class = "timeline-info">
+        <button class = "timeline-btn">
+            <span>2026   |   Re-Proposal</span><i class="fas fa-chevron-down"></i>
+        </button>
+
+        <div class = "timeline-content">
+            <p> Now, in 2026, after nine years of love, perseverance, and unwavering partnership, Robert and Patrice are preparing 
+            to fulfill that long-awaited dream. The same hands that carefully crafted the love stories of so many couples are finally 
+            writing the next chapter of their own. Their journey is a testament to the power of faith, resilience, and love that never 
+            stopped believing. If Robert and Patrice could turn their own dreams into reality despite every challenge they faced, they 
+            will pour that same passion, care, and dedication into bringing your dream wedding to life. Because to them, every love story 
+            deserves to be celebrated with the same magic they have always believed in, including their own. </p>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<section class = "section hidden">
+    <div class = "cards">
+        <div class = "card">
             <h2>Mission</h2>
             <p>
                 To provide reliable, organized, and client-focused event planning
@@ -74,7 +140,7 @@
             </p>
         </div>
 
-        <div class="card">
+        <div class = "card">
             <h2>Vision</h2>
             <p>
                 To become a trusted and leading event planning company known for
@@ -86,70 +152,196 @@
 
 </section>
 
-<section class="section">
 
-    <h2>About the System</h2>
+<section class = "section hidden">
 
-    <p>
-        The A&A Events Web-Based Event Management and Client Information
-        System was developed to improve booking management, appointment
-        scheduling, vendor coordination, document storage, and business
-        reporting.
-    </p>
+    <h2> OUR OBJECTIVES </h2>
 
-    <p>
-        By centralizing information into one platform, the system helps
-        streamline daily operations and provide better service to clients.
-    </p>
+    <div class = "cards">
 
-</section>
-
-<section class="section">
-
-    <h2>Project Objectives</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>📅 Booking Management</h3>
-            <p>Streamline the booking and inquiry process.</p>
+        <div class = "card">
+            <h3>🎀 Quality Service </h3>
+            <p>Deliver high-quality event planning that provides excellent value to clients.</p>
         </div>
 
-        <div class="card">
-            <h3>🤝 Vendor Coordination</h3>
-            <p>Improve communication and coordination with vendors.</p>
+        <div class = "card">
+            <h3>🤝 Client's Joy </h3>
+            <p>Provide personalized and seamless event experiences for every client.</p>
         </div>
 
-        <div class="card">
-            <h3>📂 Record Management</h3>
-            <p>Provide centralized storage for records and documents.</p>
+        <div class = "card">
+            <h3>📂 Stability</h3>
+            <p>Strengthen operations to achieve long-term stability and customer trust.</p>
         </div>
 
-        <div class="card">
-            <h3>📊 Reporting</h3>
-            <p>Generate reports for monitoring and decision-making.</p>
+        <div class = "card">
+            <h3>📊 Business Growth </h3>
+            <p>Expand the business by two to three times and establish an events venue.</p>
         </div>
 
     </div>
 
 </section>
 
-<section class="section">
+<section class="section hidden">
 
-    <h2>Our Events</h2>
-
-    <div class="gallery">
-
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/608120912_1461178696014158_6266749985007935125_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFpjq23bGbrjjXp5uREEV_MOYbCI0WI0nQ5hsIjRYjSdMQ-jPuzRBy9YBOyuzEwK2WCX_o2LGqtRU5Vh1o5HSd6&_nc_ohc=kde-XMh_pbkQ7kNvwFAHzsB&_nc_oc=Adr-U39OumxlG8ZU8dXW3CTeAR14j5Vlxk10FKfspGWeQbQ6IUVTZIZEhaL--DXUMVE&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=nTWXD2krA7gLrOJ4Y4kvJQ&_nc_ss=7b2a8&oh=00_Af9fmRN33H2M8n_QgYT6zTgZCeqFYnfBYwrKmSRm8xOzuw&oe=6A357AFD" alt="Wedding Event">
-
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/605744564_1461177819347579_6583122474379816573_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHXc0IZ1TbIsRsJd9Wigqbhp-D5sHyJAxSn4PmwfIkDFAqxKC6lvx9IMA9QPj1FAhmg8rF4NkhqF5Mfm-5fGlxn&_nc_ohc=aKxQsB06Lx4Q7kNvwH65cRs&_nc_oc=AdrKqMJNlKdMJyhakMphb3ZtTxNLn4sQtZvdOCEAAtA9A-SrvVAhIuKNaN4yCumJNhg&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=TnHNrinYlDRkTouxmkPprA&_nc_ss=7b2a8&oh=00_Af-yUoMyQAJdN8pbOBYKjHcnHFUjPyldxfkp_73iSqJDvA&oe=6A35859A" alt="Wedding Event">
-
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/558965095_1386331766832185_4928216038680355836_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEpsMeKUe7YYRUwleDumNa1Q6h9KsgO6SxDqH0qyA7pLOSM13aYv1BDbGm507-oRmJyKypRzxxkpkWFW9XZkosX&_nc_ohc=aGSNN8KZS_cQ7kNvwFVYd7x&_nc_oc=AdrdMtDKaZ0pbI1LSuJe3iXtXSNZVA2-YmZQ9Xt7Jd65y-xf1QFP76nA8CEoHGh27WI&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=0O3xkplLd6CD3u7MD8p1TA&_nc_ss=7b2a8&oh=00_Af9inVPui2AXBaANnPBEeozG_pOorsqzEZxyPSSxm5XNRw&oe=6A35616B" alt="Wedding Event">
+    <h2>OUR EVENTS</h2>
+    <div class = "gallery">
+        <img src = "weddingphoto1.jpg" alt = "Wedding Event">  
+        <img src = "weddingphoto2.jpg" alt = "Wedding Event"> 
+        <img src = "weddingphoto3.jpg" alt = "Wedding Event"> 
+        <img src = "weddingphoto4.jpg" alt = "Wedding Event"> 
+        <img src = "weddingphoto5.jpg" alt = "Wedding Event">
+        <img src = "weddingphoto6.jpg" alt = "Wedding Event"> 
 
     </div>
 
 </section>
+
+<div class = "modal" id="authModal">
+    <div class = "modal-content">
+        <span class = "close">&times;</span>
+        <div id = "loginForm">
+            <h2>Login</h2>
+            <form>
+                <label>Email</label>
+                <input type = "email" required>
+                <label>Password</label>
+                <input type = "password" required>
+                <button type = "submit">
+                    Login
+                </button>
+            </form>
+
+            <p>
+                Don't have an account?
+                <a href = "#" id = "showRegister">
+                    Register
+                </a>
+            </p>
+
+        </div>
+        <div id = "registerForm" style = "display:none;">
+            <h2>Create Account</h2>
+            <p class="subtitle">
+            Join A&A Events and start planning your dream wedding.
+            </p>
+            <form>
+                <label>User Type</label>
+                <div class = "user-type">
+                    <input type = "radio" id = "client" name = "userType" value = "Client" checked>
+                    <label for = "client" class = "type-btn">Client</label>
+
+                    <input type = "radio" id = "admin" name = "userType" value = "Admin">
+                    <label for = "admin" class = "type-btn">Admin</label>
+                </div>
+                <label>Full Name</label>
+                <input type = "text" required>
+
+                <label>Email</label>
+                <input type = "email" required>
+
+                <label>Birthday</label>
+                <input type = "date" required>
+
+                <div class = "input-row">
+                <div class ="input-group">
+                    <label>City / Area</label>
+                    <input type = "text" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone (Optional)</label>
+                    <input type="tel">
+                </div>
+            </div>
+
+                <label>Password</label>
+                <input
+                    type = "password"
+                    minlength = "6"
+                    required
+                >
+                <button type = "submit">
+                    Register
+                </button>
+
+            </form>
+            <p>
+                Already have an account?
+                <a href = "#" id = "showLogin">
+                    Login
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
 
 <footer>
     <p>© 2017 A&A Events. All Rights Reserved.</p>
 </footer>
+
+<script>
+    const observer=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+        if(entry.isIntersecting){
+    entry.target.classList.add("show");
+} }); });
+    document.querySelectorAll(".hidden").forEach(el=>{
+        observer.observe(el);});
+</script>
+
+<script>
+    const buttons = document.querySelectorAll(".timeline-btn");
+    buttons.forEach(button=>{
+        button.addEventListener("click",()=>{
+            button.classList.toggle("active");
+            const content = button.nextElementSibling;
+            if(content.style.maxHeight){
+                content.style.maxHeight = null;
+                content.style.padding = "0 20px";
+            }else{
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.padding = "0 20px 20px";
+            }
+        });
+    });
+
+    const modal = document.getElementById("authModal");
+const loginBtn = document.getElementById("loginBtn");
+const registerBtn = document.getElementById("registerBtn");
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const closeBtn = document.querySelector(".close");
+    loginBtn.onclick = () => {
+        modal.style.display = "flex";
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    }
+
+    registerBtn.onclick = () => {
+        modal.style.display = "flex";
+        registerForm.style.display = "block";
+        loginForm.style.display = "none";
+    }
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (e)=>{
+        if(e.target == modal){
+            modal.style.display = "none";
+        }
+    }
+    document.getElementById("showRegister").onclick = ()=>{
+        loginForm.style.display="none";
+        registerForm.style.display="block";
+    }
+    document.getElementById("showLogin").onclick = ()=>{
+        registerForm.style.display="none";
+        loginForm.style.display="block";
+    }
+</script>
+
+</body>
+</html>

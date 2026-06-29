@@ -1,95 +1,256 @@
-
 <!DOCTYPE html>
 <html lang = "en">
 <head>
     <title> Contacts </title>
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="contact.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href = "contact.css">
 </head>
 
 <body>
-<header class="header-nav">
+<header class = "header-nav">
     <nav>
-        <a href = "home.html" class = "active"> Home </a>
+        <a href = "home.html" > Home </a>
         <a href = "about-us.html" > About Us </a>
         <a href = "services.html" > Services </a>
-        <a href = "contacts.html" > Contacts </a>
-        <a href = "LogIn.html" > Login </a>
-        <a href = "register.html" > Register </a>
-        <a href = "Dashboard.html" > Dashboard </a>
-        <a href = "records.html" > Reservations </a>
-        <a href = "reports.html" > Reports </a>
-        <a href = "profile.html" > Profile </a>
+        <a href = "contacts.html" class = "active" > Contacts </a>
     </nav>
 
+    <div class = "nav-right">
+        <button id = "loginBtn" class = "login-btn">
+            Login
+        </button>
+
+        <button id = "registerBtn" class = "register-btn">
+            Register
+        </button>
+
     <a href = "home.html" class = "logo">
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/305545512_512139750918062_4409565610826396728_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGMdO81dUvLzI0GUTm1FJf8kjxIqw4ru7SSPEirDiu7tP4w7U6a3GDpS6lhlxvbBVF2K4KFnYa3pmUEILkPZACd&_nc_ohc=KaBIExa7q64Q7kNvwGly-7Q&_nc_oc=Adpf2DGbZg3FPBxxmUClOWvWo6Vp8FtZZ0EQlxA6rVnyVbHKE0hDiGunwD1tjrx7Xd8&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=8vhoW2-qUNAurg37bPZDYA&_nc_ss=7b2a8&oh=00_Af81w8Tlwnrq3ySDstfETJz34vNTMIKyFwZUaSPSFhzfAA&oe=6A356BAF" alt="A&A Logo">
+        <img src = "logo.jpg" alt="A&A Logo">
     </a>
 </header>
 
 
-<section class="contact-wrapper">
-
-<div class="contact-info">
-
-<img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/305545512_512139750918062_4409565610826396728_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=KaBIExa7q64Q7kNvwGly-7Q&_nc_oc=Adpf2DGbZg3FPBxxmUClOWvWo6Vp8FtZZ0EQlxA6rVnyVbHKE0hDiGunwD1tjrx7Xd8&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=WelBk1kRVV30DuxdvGUJwA&_nc_ss=7b289&oh=00_Af-eBwTtcolEX4fopy_iDsZsBq2jTQbFFaX2_H8IEUp7IA&oe=6A356BAF" alt="A&A Events Logo" class="contact-logo">
-
-<h3>For inquiries and event bookings, please contact us:</h3>
-
-<div class="info-item">
-<i class="fa-solid fa-phone"></i>
-<span>0936 379 5147</span>
-</div>
-
-<a href="https://www.facebook.com/eventsbyAA" target="_blank" class="info-item social-link">
-<i class="fa-brands fa-facebook"></i>
-<span>A&A Events</span>
-</a>
-
-<div class="info-item">
-<i class="fa-solid fa-envelope"></i>
-<span>ghiarem.arcilla@gmail.com</span>
-</div>
-
-<div class="info-item">
-<i class="fa-solid fa-envelope"></i>
-<span>eventsbyaa@gmail.com</span>
-</div>
-
-<div class="team-section">
-<h4>A&A Events</h4>
-<p>Alonso, Patrice Ghiarem</p>
-<p>Alonso, Robert</p>
-</div>
-
-<div class="team-section">
-<h4>Developers</h4>
-<p>Arcilla, Kahreen Mikaela</p>
-<p>Tan, Adrian Luke U.</p>
-<p>Ramirez, Mheika Jaye Hagita</p>
-<p>Resurreccion, Lorenzo Heraldo</p>
-</div>
+<section class = "contact-wrapper">
+    
+    <div class = "contact-info">
+    <img src = "logo.jpg" alt = "A&A Events Logo" class = "contact-logo">
+    <h3>For inquiries and event bookings, please contact us:</h3>
+    
+    <div class = "info-item">
+        <i class = "fa-solid fa-phone"></i>
+        <span> 0936 379 5147 </span>
+    </div>
+    
+    <a href = "https://www.facebook.com/eventsbyAA" target = "_blank" class = "info-item social-link">
+        <i class = "fa-brands fa-facebook"></i>
+        <span>A&A Events</span>
+    </a>
+    
+    <div class = "info-item">
+        <i class = "fa-solid fa-envelope"></i>
+        <span>ghiarem.arcilla@gmail.com</span>
+    </div>
+    
+    <div class = "info-item">
+        <i class = "fa-solid fa-envelope"></i>
+        <span>eventsbyaa@gmail.com</span>
+    </div>
+    
+    <div class = "team-section">
+        <h4>A&A Events</h4>
+        <p>Alonso, Patrice Ghiarem</p>
+        <p>Alonso, Robert</p>
+    </div>
+    
+    <div class = "team-section">
+        <h4>Developers</h4>
+        <p>Arcilla, Kahreen Mikaela T.</p>
+        <p>Tan, Adrian Luke U.</p>
+        <p>Ramirez, Mheika Jaye H. </p>
+        <p>Resurreccion, Lorenzo Heraldo</p>
+    </div>
 
 </div>
 
 
 <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form>
+            <input type = "text" placeholder = "Full Name" required>
+            <input type = "email" placeholder = "Email Address" required>
+            
+            <div class = "form-purpose-container">
+                <label class = "purpose-title">Reason for contacting us:</label>
+                <div class = "purpose-options">
+                    <label class = "purpose-btn">
+                        <input type = "radio" name = "purpose" value = "question" checked onclick = "toggleAppointmentFields(false)">
+                        <span>Question</span>
+                    </label>
+                    <label class ="purpose-btn">
+                        <input type = "radio" name = "purpose" value = "appointment" onclick = "toggleAppointmentFields(true)">
+                        <span>Appointment Application</span>
+                    </label>
+                    <label class = "purpose-btn">
+                        <input type = "radio" name = "purpose" value = "report" onclick = "toggleAppointmentFields(false)">
+                        <span>Report</span>
+                    </label>
+                </div>
+            </div>
 
-<h2>Send Us a Message</h2>
+            <div id = "appointment-fields" class = "conditional-fields" style="display: none;">
+                <div class = "field-group">
+                    <label>Preferred Date & Time</label>
+                    <input type = "datetime-local" id = "appointment-time">
+                </div>
+                <div class = "field-group">
+                    <label>Preferred Location</label>
+                    <input type = "text" id = "appointment-location" placeholder = "Where would you prefer to meet?">
+                </div>
+            </div>
 
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<textarea rows="6" placeholder="Your Message" required></textarea>
-<button type="submit">Submit</button>
-</form>
-
-</div>
+            <textarea rows = "6" placeholder = "Your Message" required></textarea>
+            <button type = "submit"> Submit </button>
+        </form>
+    </div>
 
 </section>
+
+<div class = "modal" id="authModal">
+    <div class = "modal-content">
+        <span class = "close">&times;</span>
+        <div id = "loginForm">
+            <h2>Login</h2>
+            <form>
+                <label>Email</label>
+                <input type = "email" required>
+                <label>Password</label>
+                <input type = "password" required>
+                <button type = "submit">
+                    Login
+                </button>
+            </form>
+
+            <p>
+                Don't have an account?
+                <a href = "#" id = "showRegister">
+                    Register
+                </a>
+            </p>
+
+        </div>
+        <div id = "registerForm" style = "display:none;">
+            <h2>Create Account</h2>
+            <p class="subtitle">
+            Join A&A Events and start planning your dream wedding.
+            </p>
+           <label>User Type</label>
+                <div class = "user-type">
+                    <input type = "radio" id = "client" name = "userType" value = "Client" checked>
+                    <label for = "client" class = "type-btn">Client</label>
+
+                    <input type = "radio" id = "admin" name = "userType" value = "Admin">
+                    <label for = "admin" class = "type-btn">Admin</label>
+                </div>
+                <label>Full Name</label>
+                <input type = "text" required>
+
+                <label>Email</label>
+                <input type = "email" required>
+
+                <label>Birthday</label>
+                <input type = "date" required>
+
+                <div class = "input-row">
+                <div class ="input-group">
+                    <label>City / Area</label>
+                    <input type = "text" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone (Optional)</label>
+                    <input type="tel">
+                </div>
+            </div>
+
+                <label>Password</label>
+                <input
+                    type = "password"
+                    minlength = "6"
+                    required
+                >
+                <button type = "submit">
+                    Register
+                </button>
+
+            </form>
+            <p>
+                Already have an account?
+                <a href = "#" id = "showLogin">
+                    Login
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleAppointmentFields(show) {
+        const appointmentDiv = document.getElementById('appointment-fields');
+        const timeInput = document.getElementById('appointment-time');
+        const locationInput = document.getElementById('appointment-location');
+        
+        if (show) {
+            appointmentDiv.style.display = 'block';
+            timeInput.required = true;
+            locationInput.required = true;
+        } else {
+            appointmentDiv.style.display = 'none';
+            timeInput.required = false;
+            locationInput.required = false;
+            timeInput.value = '';
+            locationInput.value = '';
+        }
+    }
+
+    const modal = document.getElementById("authModal");
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+    const closeBtn = document.querySelector(".close");
+    loginBtn.onclick = () => {
+        modal.style.display = "flex";
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    }
+
+    registerBtn.onclick = () => {
+        modal.style.display = "flex";
+        registerForm.style.display = "block";
+        loginForm.style.display = "none";
+    }
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (e)=>{
+        if(e.target == modal){
+            modal.style.display = "none";
+        }
+    }
+    document.getElementById("showRegister").onclick = ()=>{
+        loginForm.style.display="none";
+        registerForm.style.display="block";
+    }
+    document.getElementById("showLogin").onclick = ()=>{
+        registerForm.style.display="none";
+        loginForm.style.display="block";
+    }
+</script>
+
 <footer>
         <p>© 2017 A&A Events. All Rights Reserved.</p>
     </footer>

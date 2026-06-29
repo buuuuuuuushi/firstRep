@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-<title> Services </title>
-<meta charset = "UTF-8">
-<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-<link href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
-<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
-<link rel="stylesheet" href="services.css">
-</head>
-
+  <title> Services  </title>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <link href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+  <link rel = "stylesheet" href = "services.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  
 <body>
     <header class = "header-nav">
     <nav>
-        <a href = "home.html" class = "active"> Home </a>
-        <a href = "about-us.html" > About Us </a>
-        <a href = "services.html" class = "active" > Services </a>
-        <a href = "contacts.html" > Contacts </a>
-        <a href = "LogIn.html" > Login </a>
-        <a href = "register.html" > Register </a>
-        <a href = "Dashboard.html" > Dashboard </a>
-        <a href = "records.html" > Reservations </a>
-        <a href = "reports.html" > Reports </a>
-        <a href = "profile.html" > Profile </a>
-    
+      <a href = "home.html" > Home </a>
+      <a href = "about-us.html" > About Us </a>
+      <a href = "services.html" class = "active" > Services </a>
+      <a href = "contacts.html" > Contacts </a>
     </nav>
 
+    <div class = "nav-right">
+        <button id = "loginBtn" class = "login-btn">
+            Login
+        </button>
+
+        <button id = "registerBtn" class = "register-btn">
+            Register
+        </button>
+
     <a href = "home.html" class = "logo">
-    <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/305545512_512139750918062_4409565610826396728_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGMdO81dUvLzI0GUTm1FJf8kjxIqw4ru7SSPEirDiu7tP4w7U6a3GDpS6lhlxvbBVF2K4KFnYa3pmUEILkPZACd&_nc_ohc=KaBIExa7q64Q7kNvwGly-7Q&_nc_oc=Adpf2DGbZg3FPBxxmUClOWvWo6Vp8FtZZ0EQlxA6rVnyVbHKE0hDiGunwD1tjrx7Xd8&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=8vhoW2-qUNAurg37bPZDYA&_nc_ss=7b2a8&oh=00_Af81w8Tlwnrq3ySDstfETJz34vNTMIKyFwZUaSPSFhzfAA&oe=6A356BAF" alt="A&A Logo">
+      <img src = "logo.jpg" alt="A&A Logo">
     </a>
-
-    
-    </header>
-
+  </header>
+  
 <section class = "service-hero">
     <div class = "hero-overlay">
-        <h1> Our Services </h1>
-        <p> From planning to execution, we make every celebration seamless, elegant, and memorable.</p>
+        <img src = "A&A.png" alt = "" class = "png-shadow">
     </div>
 </section>
 
-<section class = "services-container">
+<section class = "services-container reveal">
 
     <div class = "intro-card">
         <h2>What We Offer</h2>
@@ -78,10 +78,81 @@
     </div>
 </section>
 
-<section class = "service-detail">
+<section class = "budget-estimator reveal">
+    <div class = "budget-panel">
+        <div class = "budget-controls">
+            <label class = "control-label">
+                Guest Count </label>
+
+            <div class = "pax-buttons">
+                <button class="pax active"
+                        data-min="45000"
+                        data-max="550000">
+                    50
+                </button>
+                <button class="pax"
+                        data-min="60000"
+                        data-max="600000">
+                    75
+                </button>
+                <button class="pax"
+                        data-min="110000"
+                        data-max="700000">
+                    100
+                </button>
+                <button class="pax"
+                        data-min="150000"
+                        data-max="900000">
+                    150
+                </button>
+                <button class="pax"
+                        data-min="220000"
+                        data-max="1500000">
+                    200
+                </button>
+            </div>
+
+            <div id = "breakdownLegend"></div>
+        </div>
+
+        <div class = "budget-display">
+            <h2>
+                Estimated Budget
+            </h2>
+
+            <span id = "budgetValue">
+                ₱99,000
+            </span>
+            <div class = "chart-container">
+                <canvas id = "budgetChart"></canvas>
+            </div>
+            <div class = "range-wrapper">
+                <span class = "label left" id = "minLabel">
+                    ₱45k
+                </span>
+                <span class="label right" id="maxLabel">
+                    ₱550k
+                </span>
+
+                <input
+                    type = "range"
+                    id = "budgetSlider"
+                    min = "45000"
+                    max = "550000"
+                    value = "99000"
+                    step = "1000">
+                <div id = "sliderBubble">
+                    ₱99,000
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class = "service-detail reveal">
 
     <div class = "detail-image">
-        <img src = "https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/559061334_1386334520165243_3549642226218699882_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=105&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeHn9lcWreRGzqDn9B4NR8XHH-whVre9W1Yf7CFWt71bVhr6cthF6z0TsREQulz7majc-TCbrA6js0RwNHYv0Ls2&_nc_ohc=jjfEgPhtNocQ7kNvwFPnbzs&_nc_oc=AdpVhRJkLTHioWF7TQ34S6rDiYnlm5nRjQX1l5kJfCOoD-uV0darU43H667MeSFBLQ0&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=uGjhSRpS-FwIxbiCx8NNGw&_nc_ss=7b2a8&oh=00_Af98kFj_DTvbFOjS8sPPL1XAj7piSukFh5YrSdMQ2nP1ww&oe=6A357E24" alt="Budget Planning">
+        <img src = "plan.jpg" alt="Budget Planning">
     </div>
 
     <div class = "detail-content">
@@ -98,19 +169,19 @@
         </div>
 
         <p class = "note">
-            *Packages can be customized according to your wedding requirements.
+            Packages can be customized according to your own preferences.
         </p>
     </div>
 
 </section>
 
-<section class="service-detail reverse">
+<section class="service-detail reverse reveal">
 
-    <div class="detail-image">
-        <img src="https://scontent.fmnl15-1.fna.fbcdn.net/v/t39.30808-6/557985391_1386305600168135_7100995794070275124_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=108&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFYQbSqWvbR7MLSmXGOerwmwDQ7SgFys2HANDtKAXKzYVXZcJ7RGbrUZk_UrujmkKahJa3ctrqpGel4F1K3f-VR&_nc_ohc=HjjsEc9jE8kQ7kNvwE8aP1C&_nc_oc=Adq4_hz0msEKMsWrgcwU_2PsD9ZZBHUqABcSXSGyTscyzAaMkZy4DyQBIqxd-eZ7G6Y&_nc_zt=23&_nc_ht=scontent.fmnl15-1.fna&_nc_gid=abb5eVjgBapD0PqVlwQFGw&_nc_ss=7b2a8&oh=00_Af92v6zuC4QkwQkr0pcMNPAsscszPiolMYBI1Bx1GCRk9g&oe=6A357009" alt="Wedding Process">
+    <div class = "detail-image">
+        <img src = "process.jpg" alt="Wedding Process">
     </div>
 
-    <div class="detail-content">
+    <div class = "detail-content">
         <h2>What To Expect</h2>
 
         <ul>
@@ -124,23 +195,23 @@
 
 </section>
 
-<section class="vendors-section">
+<section class = "vendors-section reveal">
 
     <h2>Partner Vendors</h2>
 
-    <div class="vendor-grid">
+    <div class = "vendor-grid">
 
-        <div class="vendor-card">
+        <div class = "vendor-card">
             <h3>Catering</h3>
             <p>Buffet setup, waitstaff, tableware, and beverages.</p>
         </div>
 
-        <div class="vendor-card">
+        <div class = "vendor-card">
             <h3>Styling</h3>
             <p>Church decoration, reception styling, and floral arrangements.</p>
         </div>
 
-        <div class="vendor-card">
+        <div class = "vendor-card">
             <h3>Entertainment</h3>
             <p>Live bands, hosts, mobile bars, and interactive stations.</p>
         </div>
@@ -154,15 +225,301 @@
 
 </section>
 
-<section class="cta-section">
-    <h2>Ready to Plan Your Dream Wedding?</h2>
-    <p>Let us help create a celebration you'll remember forever.</p>
+<section class = "wedding-process reveal">
+    <div class = "process-card">
+        <h2> Ready to Save the Date?</h2>
+        <p class = "subtitle">
+            Your dream wedding is only a few steps away.
+            Here's how we make your special day unforgettable.
+        </p>
 
-    <a href = "4Contacts.html" class = "cta-button">
-        Book a Consultation
-    </a>
+        <div class = "steps">
+            <div class ="step">
+                <span>1</span>
+                <p>Tell us what type of event you're planning.</p>
+            </div>
+            <div class = "step">
+                <span>2</span>
+                <p>Reserve your formal consultation date.</p>
+            </div>
+            <div class = "step">
+                <span>3</span>
+                <p>Finalize your guest count, venue, budget and package.</p>
+            </div>
+            <div class = "step">
+                <span>4</span>
+                <p>Review and sign the service agreement.</p>
+            </div>
+
+            <div class = "step">
+                <span>5</span>
+                <p>Secure your booking with the initial deposit.</p>
+            </div>
+            <div class = "step">
+                <span>6</span>
+                <p>Coordinate with our team while we prepare every detail.</p>
+            </div>
+            <div class = "step">
+                <span>7</span>
+                <p>Celebrate one of the happiest days of your life. </p>
+            </div>
+
+        </div>
+
+        <div class = "cta-image reveal">
+            <img src = "save.jpg" alt = "Ready to Save the Date">
+        </div>
+
+        <div class = "cta-buttons reveal">
+
+            <a href = "contacts.html" class = "primary-btn">
+                <i class = "fas fa-calendar-check"></i>
+                Book a Consultation
+            </a>
+
+            <a href = "book-wedding.html" class = "secondary-btn">
+                <i class = "fas fa-heart"></i>
+                Book Your Wedding
+            </a>
+        </div>
+    </div>
 </section>
 
+<div class = "modal" id = "authModal">
+    <div class = "modal-content">
+        <span class = "close">&times;</span>
+        <div id = "loginForm">
+            <h2>Login</h2>
+            <form>
+                <label>Email</label>
+                <input type = "email" required>
+                <label>Password</label>
+                <input type = "password" required>
+                <button type = "submit">
+                    Login
+                </button>
+            </form>
+
+            <p>
+                Don't have an account?
+                <a href = "#" id = "showRegister">
+                    Register
+                </a>
+            </p>
+
+        </div>
+        <div id = "registerForm" style = "display:none;">
+            <h2>Create Account</h2>
+            <p class="subtitle">
+            Join A&A Events and start planning your dream wedding.
+            </p>
+            <form>
+               <label>User Type</label>
+                <div class = "user-type">
+                    <input type = "radio" id = "client" name = "userType" value = "Client" checked>
+                    <label for = "client" class = "type-btn">Client</label>
+
+                    <input type = "radio" id = "admin" name = "userType" value = "Admin">
+                    <label for = "admin" class = "type-btn">Admin</label>
+                </div>
+                <label>Full Name</label>
+                <input type = "text" required>
+
+                <label>Email</label>
+                <input type = "email" required>
+
+                <label>Birthday</label>
+                <input type = "date" required>
+
+                <div class = "input-row">
+                <div class ="input-group">
+                    <label>City / Area</label>
+                    <input type = "text" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone (Optional)</label>
+                    <input type="tel">
+                </div>
+            </div>
+
+                <label>Password</label>
+                <input
+                    type = "password"
+                    minlength = "6"
+                    required
+                >
+                <button type = "submit">
+                    Register
+                </button>
+
+            </form>
+            <p>
+                Already have an account?
+                <a href = "#" id = "showLogin">
+                    Login
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("active");
+            }
+        });
+    },{
+        threshold:0.2
+    });
+
+    reveals.forEach(section=>{
+        observer.observe(section);
+    });
+
+    const hero = document.querySelector(".service-hero");
+    window.addEventListener("scroll", ()=>{
+            hero.style.backgroundPositionY = `${window.pageYOffset * 0.45}px`;
+            });
+
+    const hero = document.querySelector(".service-hero");
+    window.addEventListener("scroll", ()=>{
+        hero.style.backgroundPositionY = `${window.pageYOffset * 0.45}px`;
+    });
+  </script>
+
+  <script>
+    const slider = document.getElementById("budgetSlider");
+    const bubble = document.getElementById("sliderBubble");
+    const valueText = document.getElementById("budgetValue");
+    const paxButtons = document.querySelectorAll(".pax");
+    const legend = document.getElementById("breakdownLegend");
+    const minLabel = document.getElementById("minLabel");
+    const maxLabel = document.getElementById("maxLabel");
+
+    const ctx = document.getElementById('budgetChart').getContext('2d');
+    let budgetChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Catering', 'Venue', 'Church', 'Bar', 'Photo', 'Decor', 'Others'],
+            datasets: [{
+                data: [34650, 19800, 4950, 9900, 14850, 9900, 4950],
+                backgroundColor: ['#781727', '#B08968', '#d8cfc7', '#4A3F35', '#eedcb0', '#f28aa1', '#363434'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    function peso(val){
+        return "₱" + Number(val).toLocaleString();
+    }
+
+    function pesoShort(val) {
+        const num = Number(val);
+        if (num >= 1000000) {
+            return "₱" + (num / 1000000).toFixed(1).replace('.0', '') + "M";
+        }
+        return "₱" + (num / 1000) + "k";
+    }
+
+    function updateUI(){
+        const val = Number(slider.value);
+        const data = {
+            Catering: val * .35,
+            Venue: val * .20,
+            Church: val * .05,
+            Bar: val * .10,
+            Photo: val * .15,
+            Decor: val * .10,
+            Others: val * .05
+        };
+
+        budgetChart.data.datasets[0].data = Object.values(data);
+        budgetChart.update();
+
+        valueText.innerText = peso(val);
+        bubble.innerText = peso(val);
+        legend.innerHTML="";
+        
+        Object.entries(data).forEach(([key,amount])=>{
+            legend.innerHTML += `
+            <div class="legend-item">
+                <span>${key}</span>
+                <strong>${peso(amount)}</strong>
+            </div>
+            `;
+        });
+
+        const pct = (val-slider.min)/(slider.max-slider.min);
+        bubble.style.left = `calc(${pct*100}% + (${(0.5-pct)*22}px))`;
+    }
+    
+    paxButtons.forEach(btn=>{
+        btn.addEventListener("click",()=>{
+            paxButtons.forEach(b=>b.classList.remove("active"));
+            btn.classList.add("active");
+            
+            slider.min = btn.dataset.min;
+            slider.max = btn.dataset.max;
+            slider.value = (Number(slider.min)+Number(slider.max))/2;
+            
+            minLabel.innerText = pesoShort(slider.min);
+            maxLabel.innerText = pesoShort(slider.max);
+            
+            updateUI();
+        });
+    });
+
+    slider.oninput = updateUI;
+    window.onload = updateUI;
+
+    const modal = document.getElementById("authModal");
+    const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+    const closeBtn = document.querySelector(".close");
+    loginBtn.onclick = () => {
+        modal.style.display = "flex";
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    }
+
+    registerBtn.onclick = () => {
+        modal.style.display = "flex";
+        registerForm.style.display = "block";
+        loginForm.style.display = "none";
+    }
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (e)=>{
+        if(e.target == modal){
+            modal.style.display = "none";
+        }
+    }
+    document.getElementById("showRegister").onclick = ()=>{
+        loginForm.style.display="none";
+        registerForm.style.display="block";
+    }
+    document.getElementById("showLogin").onclick = ()=>{
+        registerForm.style.display="none";
+        loginForm.style.display="block";
+    }
+  </script>
+
 <footer>
-        <p>© 2017 A&A Events. All Rights Reserved.</p>
-    </footer>
+    <p>© 2017 A&A Events. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
